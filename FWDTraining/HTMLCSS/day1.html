@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="HTML Training" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="John Doe" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FirstHTML</title>
+  </head>
+  <body>
+    <!--
+      Block Level elements
+      --- An element that always start on a new line
+      --- Browser adds some margin to the element
+      --- Takes up full available width
+      --- Eg: <p>, <div>, <header>, <h1>--<h6>, <section>, <table>, <ul>, <li>, etc..
+      
+      Inline elements
+      --- Does not start on a new line
+      --- Takes up only the necessary space
+      --- Eg: <a>, <label>, <small>, <span>, <b>, <br>, <img>, <input>, etc...
+    -->
+    <header 
+      style="background-color: rgb(169, 169, 169); 
+      margin-bottom: 50px; font-size: 50px;">
+      MY FIRST HTML PAGE
+    </header>
+
+    <p style="background-color: yellow; margin-bottom: 50px;">
+      <span style="background-color: rgb(108, 247, 180);">Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+    
+    <!-- 
+      Semantic elements
+        --- Elements that describes its meaning both to browser and developer
+        --- Eg: <header>, <nav>, <section>, <article>, <aside>, <footer>, etc.
+      Non-Semantic elements
+        --- <div>, <span> etc..
+    -->
+    
+    <section style="margin-bottom: 50px;">
+      THIS IS A SECTION <br>
+      dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </section>
+
+    <div style="margin-bottom: 50px;">
+      THIS IS A DIV <br>
+      A division or section of an html page<br>
+      Anything can be put inside it.
+      Used with CSS for styling
+    </div>
+
+    <div style="margin-bottom: 50px;">
+      <p style="font-size: 25px; margin-bottom: 20px;">
+        Text Formatting
+      </p>
+      <p style="margin-bottom: 20px;">
+        <b>This text is bold.</b><br>
+        <strong>This text is important!</strong><br>
+        <i>This text is italic.</i><br>
+        <em>This text is emphasized.</em><br>
+        <small>This is some smaller text.</small><br>
+        Do not forget to buy <mark style = "background: blue !important;">milk</mark> today.<br>
+        My favorite color is <del>blue</del> red.<br>
+        My favorite color is <del>blue</del> <ins>red</ins><br>
+        This is <sub>subscripted</sub> text.<br><br>
+        This is <sup>superscripted</sup> text.<br>
+      </p>
+      <hr>
+       Horizontal rule
+      <hr>
+      <p>
+        <h2>Unordered HTML list</h2>
+        <ul>
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ul>
+        <br>
+        <h2>Ordered HTML list</h2>
+        <ol>
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ol>
+      </p>
+      <br>
+      <div>
+        <h3>Adding Images</h3>
+        <img src="squbix_logo.jpg" 
+          alt="Logo" 
+          width="50px" 
+          height="50px"
+        >
+        <!-- Image attributes -->
+      </div>
+      <div>
+        <h3>Video and Audio Tags</h3>
+        <div style="margin-bottom: 25px;">
+          <!--           
+            Attributes
+              controls
+              autoplay
+              muted
+              loop
+              preload
+              src
+              height
+              width
+            -->
+          <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div>
+          <!--           
+            Attributes
+              controls
+              autoplay
+              muted
+              loop
+              preload
+              src 
+            -->
+          <audio controls>
+            <source src="horse.ogg" type="audio/ogg">
+            Media not supported by browser
+          </audio>
+        </div>
+      </div>
+      <div>
+        <h3>Embed Youtube Video</h3>
+        <iframe 
+        width="514" 
+        height="514" 
+        src="https://www.youtube.com/embed/fJ9rUzIMcZQ?autoplay=1&mute=1&controls=1" 
+      ></iframe>
+        <iframe 
+          width="420" 
+          height="315" 
+          src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=0&mute=1&controls=1">
+        </iframe>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ThirdHTML</title>
+  </head>
+  <style>
+    table {
+      border : 1px solid black;
+    }
+    th {
+      border : 1px solid black;
+    }
+    td {
+      border : 1px solid black;
+      text-align: center;
+    }
+    form {
+      border : 1px solid black;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <h3>HTML Tables</h3><br>
+    <table style="width:100%">
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+        <th>Sector</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+        <td rowspan = "2">Fintech</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+      <tr>
+        <td>La Citadel</td>
+        <td colspan = "2">Unknown</td>
+        <td>Construction</td>
+      </tr>
+    </table>
+    <br><br>
+    <h3>HTML Forms</h3>
+    <form action = "javascript:submitForm()" onSubmit = "return validate()">
+      <label for = "name">Enter Name: </label>
+      <input type = "text" name = "name" id = "name" placeholder="Eg: John Doe" required><br><br>
+      <label for = "nickName">Enter Nickname: </label>
+      <input type = "text" name = "nickName" id = "nickName" placeholder="Eg: Johnny"><br><br>
+      <label for = "phoneNo">Enter Phone Number: </label>
+      <input type = "number" name = "phoneNo" id = "phoneNo" placeholder = "Eg: 70766XXXXX" pattern = "[0-9]{10}" required><br><br>
+      <input type = "submit" name = "submit" value = "Submit">
+    </form>
+    <script>
+      function validate() {
+        let ele = document.getElementById("nickName");
+        if(ele.value.length <= 2) {
+          window.alert("Nickname length must be greater than 2 characters");
+          return false;
+        } else {
+          return true;
+        }
+      }
+      function submitForm() {
+        window.alert("Form Submitted")
+      }
+    </script>
+  </body>
+</html>
