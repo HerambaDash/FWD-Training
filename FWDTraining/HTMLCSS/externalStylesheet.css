@@ -43,6 +43,10 @@ p.para {
 } */
 
 /* CSS Grouping Selector */
-h2, h4 {
+/* h2, h4 {
+  text-align: end;
+} */
+
+.endText {
   text-align: end;
 }

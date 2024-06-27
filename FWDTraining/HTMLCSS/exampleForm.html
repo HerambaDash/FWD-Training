@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ThirdHTML</title>
+    <link rel="stylesheet" href="externalStylesheet.css" />
+  </head>
+  <style>
+    form {
+      border: 1px solid black;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <h3>HTML Form - 1</h3>
+    <form action = "javascript:submitForm()" onSubmit = "return validate()">
+      <label for = "dob">Enter DOB: </label>
+      <input type = "date" name = "dob" id = "dob" required><br><br>
+      <label for = "name">Enter Name: </label>
+      <input type = "text" name = "name" id = "name" placeholder="Eg: Johnny" required><br><br>
+      <label for = "color">Select Color: </label>
+      <input type = "color" name = "color" id = "color"><br><br>
+      <input type = "submit" name = "submit" value = "Submit">
+    </form>
+    <script>
+      function validate() {
+        let validated = true;
+        let ele1 = document.getElementById("name");
+        let ele2 = document.getElementById("color")
+        if (ele1.value.length < 10) {
+          window.alert("Name must be greater than 10 characters");
+          validated = false;
+        } else if (ele2.value !== "#000000") {
+          window.alert("Color must be black. Current value : " + ele2.value);
+          validated = false;
+        }
+        return validated;
+      }
+      function submitForm() {
+        window.alert("Form Submitted");
+      }
+    </script>
+  </body>
+</html>
