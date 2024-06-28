@@ -1,0 +1,164 @@
+.backgroundColor {
+  background-color: #ff0000;
+}
+
+/* 
+  Text Properties 
+*/
+.textColorByName {
+  color: red;
+  color: rgb(255 0 0);
+}
+
+.textColorByHEX {
+  color: #ff0000;
+}
+
+.textColorByRGB {
+  color: rgb(255 0 0);
+}
+
+.textDirectionRTL {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  /* Used to denote if multiple languages need the same change*/
+}
+
+.alignLastLineToRight {
+  text-align-last: right;
+}
+
+.alignLastLineToLeft {
+  text-align-last: left;
+}
+
+.alignLastLineEvenly {
+  text-align-last: justify;
+}
+
+.verticalAlignParent {
+  font-size: 30px;
+}
+
+.imageDim {
+  height: 15px;
+  width: 15px;
+}
+
+.verticalAlignBaseline {
+  vertical-align: baseline;
+}
+
+.verticalAlignTextTop {
+  vertical-align: text-top;
+}
+
+.verticalAlignTextBottom {
+  vertical-align: text-bottom;
+}
+
+.verticalAlignSubscript {
+  vertical-align: sub;
+}
+
+.verticalAlignSuperscript {
+  vertical-align: super;
+}
+
+.textDecorationOptions {
+  /* text-decoration-line: overline; */
+  /* text-decoration-line: line-through; */
+  /* text-decoration-line: underline; */
+  /* text-decoration-line: overline underline; */
+  /* text-decoration-color: rgb(230, 26, 26); */
+  /* text-decoration-style: double; */
+  /* text-decoration-style: solid; */
+  /* text-decoration-style: dotted; */
+  /* text-decoration-style: dashed; */
+  /* text-decoration-style: wavy; */
+  /* text-decoration-thickness: auto; */
+  /* text-decoration-thickness: 5px; */
+  /* text-decoration-thickness: 25%; */
+  /* Shorthand */
+  text-decoration: underline red solid 5px;
+}
+
+.textTransform {
+  /* text-transform: uppercase; */
+  /* text-transform: lowercase; */
+  text-transform: capitalize;
+}
+
+.textSpacing {
+  background-color: aliceblue;
+  padding-left: 30px;
+  text-indent: 50px;
+  letter-spacing: 5px;
+  line-height: 30px;
+  word-spacing: 10px;
+  white-space: wrap;
+}
+
+.textShadow {
+  /* offset-x | offset-y | blur-radius | color */
+  /* text-shadow: 2px 2px 2px red; */
+  color: rgb(172, 244, 57);
+  text-shadow: 2px 1px 3px rgb(213, 244, 146), 1px 1px 5px rgb(244, 199, 94), 5px 5px 10px rgb(32, 217, 249);
+}
+
+.backgroundDemoDiv {
+  width: 93%;
+  height: 350px;
+  border: 10px solid black;
+  padding: 25px;
+}
+
+.background {
+  background-color: coral;
+  background-image: url("squbix_logo.jpg");
+  background-position: center;
+  /* auto, contain, cover, width / height */
+  background-size: 500px 300px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+ 
+}
+
+.border {
+  /* border : 10px solid red; */
+  border-width: 10px;
+  /* border-style: solid; */
+  border-top-style: dotted;
+  border-right-style: dashed;
+  border-bottom-style: solid;
+  border-left-style: groove;
+  border-color: red;
+}
+
+.margin {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  /* margin: 25px 50px 75px 100px; */
+  /* margin: 25px 50px 75px; */
+  /* margin: 25px 50px; */
+}
+
+.padding {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  /* padding: 25px 50px 75px 100px; */
+  /* padding: 25px 50px 75px; */
+  /* padding: 25px 50px; */
+}
+
+.css-box {
+  text-align: center;
+  margin: 10px;
+  border: 10px solid green;
+  padding: 10px;
+  background: rgb(219, 240, 255);
+}

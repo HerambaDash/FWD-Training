@@ -2,67 +2,68 @@
 <html>
   <head>
     <title>FourthHTML/CSS</title>
-    <link rel = "stylesheet" href = "externalStylesheet.css">
+    <link rel = "stylesheet" href = "stylesheet2.css">
   </head>
-  <style>
-    table {
-      border : 1px solid black;
-    }
-    th {
-      border : 1px solid black;
-    }
-    td {
-      border : 1px solid black;
-      text-align: center;
-    }
-    form {
-      border : 1px solid black;
-      padding: 10px;
-    }
-  </style>
   <body>
-    <h3>HTML Form - 2</h3>
-    <form action = "javascript:submitForm()" onSubmit = "return validate()">
-      Select Gender : <br>
-      <input type = "radio" name = "male" id = "male" value = "male"  onClick = "activeMale()">
-      <label for = "male">Male</label><br>
-      <input type = "radio" name = "female" id = "female" value = "female" onClick = "activeFemale()">
-      <label for = "female">Female</label><br><br>
-      <label for = "dob" style = "color:blue;">Enter DOB : </label>
-      <input type = "date" name = "dob" id = "dob" min = "2023-01-01" max = "2025-01-01"><br><br>
-      <input type = "submit" name = "submit" value = "Submit">
-    </form>
-    <script>
-      function activeMale() {
-        document.getElementById("male").checked = true;
-        document.getElementById("female").checked = false;
-      }
-      function activeFemale() {
-        document.getElementById("male").checked = false;
-        document.getElementById("female").checked = true;
-      }
-      function validate() {
-        return true;
-      }
-      function submitForm() {
-        window.alert("Form Submitted")
-      }
-    </script>
-    <h3>Basic CSS</h3>
-    CSS = Cascading Style Sheets<br><br>
-    3 Types<br>
-    <ul>
-      <li>Inline CSS</li>
-      <li>Internal CSS</li>
-      <li>External CSS</li>
-    </ul>
-    <h1>CSS Syntax</h1>
-    <span class = "cssClassSelector">CSS Selector Based on Class</span><br>
-    <span id = "cssIdSelector">CSS Selector Based on Id</span><br>
-    <p>This is a paragraph without class</p>
-    <p class = "para">This is a paragraph with class</p>
-    <p class = "colorP fontP">This is a paragraph with two classes</p>
-    <h2>Grouped</h2>
-    <h4>Text</h4>
+    <h2 class = "backgroundColor">Demo Content</h2><br>
+    <h2 class = "textColorByName">Demo Content</h2>
+    <h2 class = "textColorByHEX">Demo Content</h2>
+    <h2 class = "textColorByRGB">Demo Content</h2>
+    <h2 class = "textDirectionRTL">Demo Content</h2>
+    <p class="alignLastLineToRight">Lorem ipsum dolor sit amet, 
+      consectetur adipiscing elit. Etiam semper diam at erat pulvinar, 
+      at pulvinar felis blandit. Vestibulum volutpat tellus diam, 
+      consequat gravida libero rhoncus ut.
+    </p>
+    <p class="alignLastLineToLeft">Lorem ipsum dolor sit amet, 
+      consectetur adipiscing elit. Etiam semper diam at erat pulvinar, 
+      at pulvinar felis blandit. Vestibulum volutpat tellus diam, 
+      consequat gravida libero rhoncus ut.
+    </p>
+    <p class="alignLastLineEvenly">Lorem ipsum dolor sit amet, 
+      consectetur adipiscing elit. Etiam semper diam at erat pulvinar, 
+      at pulvinar felis blandit. Vestibulum volutpat tellus diam, 
+      consequat gravida libero rhoncus ut.
+    </p>
+    <p class = "verticalAlignParent">
+      Some Text with which image is aligned
+      <img src = "squbix_logo.jpg" alt = "Logo" class="imageDim verticalAlignBaseline">
+    </p>
+    <p class = "verticalAlignParent">
+      Some Text with which image is aligned
+      <img src = "squbix_logo.jpg" alt = "Logo" class="imageDim verticalAlignTextTop">
+    </p>
+    <p class = "verticalAlignParent">
+      Some Text with which image is aligned
+      <img src = "squbix_logo.jpg" alt = "Logo" class="imageDim verticalAlignTextBottom">
+    </p>
+    <p class = "verticalAlignParent">
+      Some Text with which image is aligned
+      <img src = "squbix_logo.jpg" alt = "Logo" class="imageDim verticalAlignSubscript">
+    </p>
+    <p class = "verticalAlignParent">
+      Some Text with which image is aligned
+      <img src = "squbix_logo.jpg" alt = "Logo" class="imageDim verticalAlignSuperscript">
+    </p>
+    <h2 class = "textDecorationOptions">Demo Content</h2><br>
+    <h2 class = "textTransform">demo content</h2><br>
+    <p class="textSpacing">Lorem ipsum dolor sit amet, 
+      consectetur adipiscing elit. Etiam semper diam at erat pulvinar, 
+      at pulvinar felis blandit. Vestibulum volutpat tellus diam, 
+      consequat gravida libero rhoncus ut.
+    </p>
+    <h2 class = "textShadow">Demo Content</h2><br>
+    <div class = "backgroundDemoDiv background border">
+      <h2>Demo Content</h2>
+      <img 
+        src = "squbix_logo.jpg" 
+        alt = "Logo" 
+      >
+    </div>
+    <h2>
+      <span class="margin padding">Demo1</span>
+      <span class="margin padding">Demo2</span>
+    </h2>
+    <h1 class="css-box">CSS BOX</h1>
   </body>
 </html>
