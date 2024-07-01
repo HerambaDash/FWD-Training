@@ -162,3 +162,201 @@
   padding: 10px;
   background: rgb(219, 240, 255);
 }
+
+.fontProperties {
+  /* small, large, x-small, xx-small, x-large, xx-large, medium, etc.. */
+  font-size: xx-large; 
+  /* italic, oblique, normal */
+  font-style: oblique;
+  /* normal, bold, bolder, lighter, 100, 200, ....., 900 */
+  font-weight: lighter;
+}
+
+.elementSize {
+  height: 200px;
+  width: 200px;
+  max-height: 100px;
+  max-width: 100px;
+  min-height: 75px;
+  min-width: 75px;
+}
+
+.navigationBar {
+  background-color: #333;
+  overflow: hidden;
+  margin: 0px;
+  /* Normal position */
+  /* position: static; */
+  /* Changes takes place relative to its normal position */
+  position: relative;
+  /* top: 50px; */
+  /* left: 50px; */
+  /* right: 50px; */
+  /* bottom: 50px; */
+  /* Positioning is done with respect to viewport */
+  position : fixed;
+  top: 10px;
+  width: 100%;
+}
+
+.navigationBar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: end;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  height: inherit;
+}
+
+.navigationBar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navigationBar a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.sizeParentDiv {
+  margin-bottom: 25px;
+}
+
+.displayPropertiesDiv {
+  height: auto;
+  background-color:#fff481;
+  padding: 20px 0px 20px;
+  display: flex;
+}
+
+.displayPropertiesParagraph {
+  background-color: blue;
+  padding: 10px;
+  margin: 20px;
+}
+
+.displayPropertiesSpan {
+  background-color: red;
+  padding: 10px;  
+  color: white;
+}
+
+.displayValue {
+  /* display: none; */
+  /* display: block; */
+  /* display: inline; */
+  
+    /* display: inline-block;
+    width: 300px;
+    height: 150px; */
+ 
+  /* Makes the children of the parent as next level in DOM */
+  /* display : contents; */
+  /* 
+    Laying elements in one dimension and then defining 
+    how those elements will grow in size or shrink in size.
+  */
+  display: flex;
+  /* 
+    Laying elements in a grid layout which is defined in the form of rows and columns
+  */
+  /* display : grid; */
+  /* 
+    display: inline-flex;
+    display: inline-grid;
+    display: table;
+    display: list-item;
+  */
+}
+.displayFlexDiv {
+  height: 400px;
+  background-color:#fff481;
+  padding: 20px 0px 20px;
+  margin-top: 30px;
+  display: flex;
+  /* 
+    Sets the direction of flex container
+    Valid values : row | row-reverse | column | column-reverse
+  */
+  
+    flex-direction : row;
+    flex-wrap: wrap; 
+ 
+  /* flex-flow : flex-direction flex-wrap */
+  /* 
+    flex-flow: row wrap;
+  */
+  /* flex-start | flex-end | center | space-between | space-around | space-evenly */
+  justify-content: flex-start;
+  /* Align items in the vertical direction */
+  /* Align all items with respect to vertical axis / cross axis */
+  /* center | flex-start | flex-end | stretch | baseline */
+  align-items : flex-start;
+}
+  
+.displayFlexParagraph {
+  background-color: blue;
+  padding: 10px;
+  margin: 20px;
+}
+  
+.displayFlexSpan {
+  background-color: red;
+  padding: 10px;  
+  color: white;
+}
+
+.flexItem1 {
+  /* Sets Initial width of flex item */
+  /* flex-basis: 35%; */
+  /* flex-basis: 250px; */
+  /* Sets how much the flex item shall grow relative to other flex items */
+  /* flex-grow: 3; */
+  /* flex-shrink: 1.5; */
+}
+
+.flexItem2 {
+  /* flex-basis: 35%; */
+  /* flex-basis: 350px; */
+}
+
+.flexItem3 {
+  /* flex-basis: 30%; */
+  align-self : flex-end;
+}
+
+/* Aligning individual content on the cross-axis */
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: center;
+  /* align-items: center; */
+  overflow: scroll;  
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.flex-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: DodgerBlue;
+}
+
+.flex-container2 > div {
+  background-color: #f1f1f1;
+  color: white;
+  width: 100px;
+  height: 100px;
+}
