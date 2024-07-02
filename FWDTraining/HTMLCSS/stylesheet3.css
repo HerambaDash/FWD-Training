@@ -1,0 +1,157 @@
+:root {
+  --myRed : rgb(190, 0, 29);
+  --myYellow: rgb(255, 252, 77);
+  --myBlue: rgb(0, 0, 188);
+  --myPurple: rgb(254, 69, 254);
+  --myGreen: rgb(88, 255, 88);
+}
+
+.grid-container {
+  height: auto;
+  display: grid;
+  background-color: var(--myRed);
+  padding: 10px;
+  margin-bottom: 50px;
+  /* Sets width of each column */
+  grid-template-columns: auto auto auto;
+  /* grid-template-columns: 50px 150px auto; */
+  /* Sets height of each row */
+  grid-template-rows: auto auto auto;
+  /* grid-template-rows: 70px 100px auto; */
+  /* row-gap: 10px;
+  column-gap: 10px; */
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  /* grid-auto-flow: column; */
+  
+    /* grid-auto-rows: 50px; */
+    /* grid-auto-columns: 75px;  */
+ 
+}
+
+/* .item1 {
+  grid-row-start: 1;
+  grid-row-end: 4;
+} */
+
+/* grid-row-start | grid-column-start | grid-row-end | grid-column-end */
+
+/* .item1 {
+  grid-area: 1 / 1 / 4 / 1;
+} */
+
+/* .item9 {
+  grid-area: 2 / 2 / 2 / 2;
+} */
+
+/* .item4 {
+  grid-column-start: 2;
+  grid-column-end: span 3;
+} */
+
+/* .item1 {
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+.item2 {
+  grid-area: 1 / 2 / 1 / 2;
+}
+
+.item3 {
+  grid-area: 1 / 3 / 1 / 3
+}
+
+.item4 {
+  grid-area: 1 / 4 / 1 / 4
+} */
+
+/* .item9 {
+  grid-area: 2 / 2 / 2 / 2;
+} */
+
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.displayPropertiesDiv {
+  height: auto;
+  margin-bottom: 50px;
+  background-color:#fff481;
+  padding: 20px 0px 20px;
+  display: flex;
+}
+
+.displayPropertiesParagraph {
+  background-color: blue;
+  padding: 10px;
+  margin: 20px;
+}
+
+.displayPropertiesSpan {
+  background-color: red;
+  padding: 10px;  
+  color: white;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media screen and (max-width: 600px) {
+  .displayPropertiesDiv {
+    flex-direction: column;
+    background-color: aqua;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  .displayPropertiesDiv {
+    flex-direction: row-reverse;
+    background-color: greenyellow;
+  }
+}
+
+.animatedDiv {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+}
+
+.animatedDiv:hover {
+  animation-name: example1;
+  animation-duration: 4s;
+  /* animation-delay: 2s; */
+  /* can take infinite as value for a loop */
+  /* animation-iteration-count: 3; */
+  /* normal | reverse | alternate | alternate-reverse */
+  /* animation-direction: alternate; */
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  animation-timing-function : ease-in;
+  /* none | forwards | backwards | both */
+  animation-fill-mode: forwards;
+}
+
+@keyframes example1 {
+  from {left : 0px;}
+  to {left: 400px;}
+}
+
+/* @keyframes example2 {
+  0%   {background-color: var(--myRed);}
+  25%  {background-color: var(--myYellow)}
+  50%  {background-color: var(--myBlue)}
+  75%  {background-color: var(--myPurple)}
+  100% {background-color: var(--myGreen)}
+} */
