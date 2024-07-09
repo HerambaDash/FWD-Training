@@ -24,11 +24,12 @@ let func1 = function() {
 
 // func1();
 
-const arrowFunction = () => {
-  console.log("This is an arrow function")
+const arrowFunction = (z, y) => {
+  // console.log("z" + z);
+  // console.log("y" + y);
 }
 
-// arrowFunction();
+// arrowFunction(2);
 
 // global scope - variable declared globally
 // local scope - variable declared in function
@@ -37,9 +38,7 @@ const arrowFunction = () => {
 let arr1 = [1,2,3,4,5];
 // console.log(arr1);
 let arr2 = new Array(1,2,3);
-// console.log(arr2);
-// let xyz = [];
-// xyz[1] = 2;
+arr2[5] = 6;
 // arr[ind]
 arr1.push(6);
 // console.log(arr1);
@@ -60,19 +59,15 @@ arr1.unshift(1);
 // console.log(arr1);
 // arr1[2] = 4;
 // console.log(arr1[2]);
-// arr1.splice(2, 1, "new 3", "new 4");
-// console.log(arr1);
 // arr1.splice(2, 1);
 // console.log(arr1);
 // arr1.splice(5, 0, 6);
 // console.log(arr1);
 // let newArr1 = arr1.slice(3);
-// console.log(arr1);
-// console.log(newArr1);
 // let newArr2 = arr1.slice(1, 4);
 // console.log(arr1);
 // console.log(newArr2);
-let arr3 = [4, 9, 16, 25, 25, 29];
+let arr3 = [4, 9, 16, 25, 25, 27];
 // console.log(arr3.indexOf(25));
 // console.log(arr3.lastIndexOf(25));
 // console.log(arr3.includes(30));
@@ -81,7 +76,7 @@ let arr3 = [4, 9, 16, 25, 25, 29];
 //   return value > 25
 // }
 // (value, index, array) =>  value > 25
-let ele1 = arr3.find((value, index, array) =>  value > 25);
+let ele1 = arr3.find((value, index, array) =>  value > 26 && value % array[1] === 0);
 // console.log(ele1);
 // findLast
 let ele2 = arr3.findIndex((value, index, array) => value === 25);
@@ -122,7 +117,7 @@ let arr5 = Object.values(person1);
 let arr6 = Object.keys(person1);
 // console.log(arr6);
 
-[
+let arr10 = [
   {
     name : "xyz",
     age : "45",
@@ -145,3 +140,6 @@ let arr6 = Object.keys(person1);
   },
 ]
 // find the age of the person whose color is yellow
+let arry = [1,3,5,7,9,11,18,21,21,21,30];
+//find an element which is divisible by element at index 1 and index
+// 3 and the found element must not have the index of 7 or 9

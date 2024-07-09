@@ -1,0 +1,15 @@
+{
+  "name": "js_tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "second.js",
+  "scripts": {
+    "myCommand": "node second.js",
+    "start": "node third.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.37.1"
+  }
+}
