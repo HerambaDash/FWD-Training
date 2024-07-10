@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9thHTML</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <style>
+      .error {
+        display: none;
+        color: red;
+        margin-left: 50px;
+      }
+      #div1 { 
+            background-color: lightgreen; 
+            padding: 24px; 
+            border: 1px solid black; 
+        } 
+  
+        #div2 { 
+            background-color: yellow; 
+            padding: 18px; 
+            border: 1px solid black; 
+  
+        } 
+  
+        #div3 { 
+            background-color: orange; 
+            border: 1px solid black; 
+        } 
+    </style>
+  </head>
+  <body>
+    <h3>Event Propagation</h3> 
+  
+    <div id="div1"> 
+        Component 1 
+        <div id="div2"> 
+            component 2 
+            <div id="div3"> 
+                component 3 
+            </div> 
+        </div> 
+    </div> 
+    <h3>HTML Forms</h3>
+    <form style = "margin-bottom: 10px;">
+      <label>Name : </label>
+      <input type = "text" id = "name" style = "margin-bottom: 10px;"> <br>
+      <label>Email : </label>
+      <input type = "text" id = "email"> <br>
+      <small id = "error" class = "error"></small>
+      <button id = "submitButton" style="margin-top: 10px;">Submit</button>
+      <small id = "promise"></small>
+    </form>
+    <a href="https://squbix.com/" target="_blank" id = "url" class = "url">
+      Open Squbix Website in another tab
+    </a>
+    <script src = "../Javascript/third.js"></script>
+  </body>
+</html>
