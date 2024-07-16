@@ -11,7 +11,3 @@ function PageLinkButton({ icon, text}) {
 }
 
 export default PageLinkButton;
-
-// { `icon ${pageLinkIcon}`}
-// { icon } "pageIcon"
-// fa-house fa-solid pageLinkIcon
