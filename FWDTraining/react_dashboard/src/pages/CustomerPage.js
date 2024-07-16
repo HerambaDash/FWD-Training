@@ -1,12 +1,12 @@
 import Sidebar from "../components/Sidebar";
 import ContentScreen from "../components/ContentScreen";
-function AccountsPage() {
+function CustomerPage() {
   return (
     <>
       <Sidebar />
-      <ContentScreen url = "accounts" />
+      <ContentScreen url = "customers" />
     </>
   );
 }
 
-export default AccountsPage;
+export default CustomerPage;

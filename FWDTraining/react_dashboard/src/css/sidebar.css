@@ -3,10 +3,9 @@
   flex-direction: column;
   flex-basis : 175px;
   background-color: rgb(217, 189, 223);
-  height: 100vh;
+  height: 99.5vh;
   justify-content: space-between;
-  border: 1px solid rgb(154, 84, 162); 
-  
+  border: 1px solid rgb(154, 84, 162);
 }
 
 .pageLinkButton {

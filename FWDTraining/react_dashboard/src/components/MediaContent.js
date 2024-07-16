@@ -1,11 +1,11 @@
 import "../css/contentScreen.css";
 
-function Content() {
+function MediaContent() {
   return (
     <div className = "content">
-      <h2>Page content goes here</h2>
+      <h2>Media content goes here</h2>
     </div>
   );
 }
 
-export default Content;
+export default MediaContent;

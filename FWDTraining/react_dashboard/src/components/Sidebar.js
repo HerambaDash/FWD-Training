@@ -6,13 +6,13 @@ function Sidebar() {
     <div className = "sidebar">
       <div className = "marginedDiv1">
         <CompanyTitle />
-        <PageLinkButton icon = "fa-solid fa-house" text = "Home" />
-        <PageLinkButton icon = "fa-solid fa-user-group" text = "Customers" />
-        <PageLinkButton icon = "fa-solid fa-id-card" text = "Departments" />
-        <PageLinkButton icon = "fa-solid fa-image" text = "Media" />
+        <PageLinkButton icon = "fa-solid fa-house" text = "Home" link = "/" />
+        <PageLinkButton icon = "fa-solid fa-user-group" text = "Customers" link = "/customers/1" />
+        <PageLinkButton icon = "fa-solid fa-id-card" text = "Departments" link = "/departments/1" />
+        <PageLinkButton icon = "fa-solid fa-image" text = "Media"  link = "/media" />
       </div>
       <div className = "marginedDiv2">
-        <PageLinkButton icon = "fa-solid fa-user" text = "My Account" />
+        <PageLinkButton icon = "fa-solid fa-user" text = "My Account" link = "/my-account"/>
       </div>
     </div>
   );
