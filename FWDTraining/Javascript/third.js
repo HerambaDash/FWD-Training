@@ -136,7 +136,7 @@ async function handleSubmitAsync(e) {
   // let length = customArr.length;
   // let toPgs = length / 10;
   // Math.ceil(toPgs);5.1 6
-  // if(pgNo > 6)  { disbale the rightArrowButton }
+  // if(pgNo == 6)  { disbale the rightArrowButton } < 6 Number(pgNo) + 1
 }
 
 function handleChange(e) {

@@ -1,0 +1,77 @@
+.sidebar {
+  display : flex;
+  flex-direction: column;
+  flex-basis : 175px;
+  background-color: rgb(217, 189, 223);
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.pageLinkButton {
+  background-color: rgb(217, 189, 223);
+  border: 1px solid rgb(154, 84, 162);
+  text-align: left;
+  height: 30px;
+  font-weight: 700;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  color: rgb(154, 84, 162);
+  width : 100%;
+  border-radius: 5px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+.pageLinkIcon {
+  color : #ffffff;
+  border: 1px solid rgb(154, 84, 162);
+  padding: 7px;
+  border-radius: 5px;
+  width: 15px;
+  margin-left: -1px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+.pageLinkText {
+  margin-left: 10px;
+  color: rgb(154, 84, 162);
+  font-weight: 700;
+}
+
+.pageLinkButton:hover {
+  background-color:  rgb(154, 84, 162);
+  color: #ffffff !important;
+}
+
+.pageLinkButton:hover .pageLinkText {
+  color: #ffffff;
+}
+
+.logoImage {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+.companyText {
+  color: rgb(154, 84, 162);
+  font-weight: 900;
+  margin-left: 5px;
+}
+
+.compTitle {
+  height: 30px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.marginedDiv1 {
+  margin: 0px 5px;
+}
+
+.marginedDiv2 {
+  margin: 5px 5px;
+}

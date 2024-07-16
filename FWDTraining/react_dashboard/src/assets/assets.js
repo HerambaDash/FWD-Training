@@ -1,1 +1,0 @@
-// All assets go here

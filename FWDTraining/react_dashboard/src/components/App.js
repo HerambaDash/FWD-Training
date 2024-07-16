@@ -1,7 +1,11 @@
+import Sidebar from "./Sidebar";
+import ContentScreen from "./ContentScreen";
+import "../css/app.css";
 function App() {
   return (
-    <div>
-      <h5>Hello World</h5>
+    <div className = "app">
+      <Sidebar />
+      <ContentScreen />
     </div>
   );
 }
