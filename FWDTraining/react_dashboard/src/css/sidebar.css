@@ -24,6 +24,14 @@
   margin-bottom: -1px;
 }
 
+.active {
+  background-color: rgb(154, 84, 162);
+}
+
+.active .pageLinkText {
+  color: #ffffff;
+}
+
 .pageLinkIcon {
   color : #ffffff;
   border: 1px solid rgb(154, 84, 162);

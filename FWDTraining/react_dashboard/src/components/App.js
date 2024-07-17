@@ -24,3 +24,5 @@ function App() {
 }
 
 export default App;
+
+// ParentDiv(relative) -> Navbar (c1, positon: fixed, top - 0) & Page(c2 & page content & top - 75px, marginTop 75px)
