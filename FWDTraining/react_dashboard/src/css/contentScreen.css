@@ -6,7 +6,10 @@
 
 .content {
   flex-grow: 1;
+  max-height: 91vh;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 .topbar {
@@ -66,4 +69,24 @@
 
 .searchIconParent:hover .searchIcon {
   color: #ffffff;
+}
+
+.customerContent {
+  flex-grow: 1;
+  /* overflow-y: scroll; */
+  /* height: 500px; */
+  margin: 10px 5px;
+}
+
+table, th, td {
+  border : 1px solid rgb(154, 84, 162);
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+}
+
+.cTable {
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  border-width: 2px;
 }

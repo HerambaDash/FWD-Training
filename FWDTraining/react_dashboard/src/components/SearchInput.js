@@ -4,7 +4,26 @@ function SearchInput() {
   const location = useLocation();
   const history = useNavigate();
   const [input, setInput] = useState("");
-  const [displayText, setDispalyText] = useState(location.pathname);
+  const [displayText, setDispalyText] = useState("");
+
+  useEffect(() => {
+    if(location.pathname === "/") {
+      setDispalyText("Home");
+    }
+    if(location.pathname === "/media") {
+      setDispalyText("Media");
+    }
+    if(location.pathname === "/my-account") {
+      setDispalyText("Accounts");
+    }
+    if(location.pathname.includes("customers")) {
+      setDispalyText("Customers");
+    }
+    if(location.pathname.includes("departments")) {
+      setDispalyText("Departments");
+    }
+  }, [location.pathname]);
+
   function handleSearch() {
     // let value = document.getElementById("search").value;
     // console.log(value);
@@ -17,7 +36,7 @@ function SearchInput() {
         id = "search"
         className="searchInput"
         type="text"
-        placeholder={"Search in" + " " + location?.pathname}
+        placeholder={"Search in " + displayText}
         onChange = {(e) => setInput(e.target.value)}
         value = {input}
       ></input>

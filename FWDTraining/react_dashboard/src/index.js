@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./css/index.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import App from "./components/App";
 import MediaContent from "./components/MediaContent";
 import AccountContent from "./components/AccountContent";
@@ -22,6 +22,8 @@ root.render(
           <Route path="customers/:pgNo" element={<CustomerContent />} />
           <Route path="" element={<HomeContent />} />
         </Route>
+        {/* <Route exact = {true} path = "/error" element = {<ErrorPage />} /> */}
+        <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
       {/* <App /> */}
     </BrowserRouter>
