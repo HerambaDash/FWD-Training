@@ -22,6 +22,7 @@ function SearchInput() {
     if(location.pathname.includes("departments")) {
       setDispalyText("Departments");
     }
+    setInput("")
   }, [location.pathname]);
 
   function handleSearch() {

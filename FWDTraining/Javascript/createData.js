@@ -4,12 +4,12 @@ let data = [];
 
 for(let i = 0; i < 50; ++i) {
   data.push({
-    customerId: "TFRHY-" + i,
     departmentId: "DEPTXE-"+ i + "ER",
-    name : "GFTH",
-    email: "example@gmail.com",
+    departmentIncharge: "Sam Harris",
+    name : "Editors Guild",
+    size: 46,
     tms : "23 GB"
   })
 }
 
-fs.writeFileSync("./data.json", JSON.stringify(data, null, 2));
+fs.writeFileSync("./departmentData.json", JSON.stringify(data, null, 2));

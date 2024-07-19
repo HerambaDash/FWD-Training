@@ -90,3 +90,12 @@ table, th, td {
   border-radius: 5px;
   border-width: 2px;
 }
+
+.activeRow {
+  background-color: rgb(217, 189, 223) !important;
+}
+
+.logout {
+  width: 70px;
+  margin: 10px;
+}
