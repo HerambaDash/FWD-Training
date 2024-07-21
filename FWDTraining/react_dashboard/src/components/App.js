@@ -1,9 +1,9 @@
-import { Routes, Route } from "react-router-dom";
-import Homepage from '../pages/Homepage';
-import AccountsPage from '../pages/AccountsPage';
-import CustomerPage from '../pages/CustomerPage';
-import DepartmentPage from '../pages/DepartmentPage';
-import MediaPage from '../pages/MediaPage';
+// import { Routes, Route } from "react-router-dom";
+// import Homepage from '../pages/Homepage';
+// import AccountsPage from '../pages/AccountsPage';
+// import CustomerPage from '../pages/CustomerPage';
+// import DepartmentPage from '../pages/DepartmentPage';
+// import MediaPage from '../pages/MediaPage';
 import Sidebar from "./Sidebar";
 import ContentScreen from "./ContentScreen";
 import "../css/app.css";

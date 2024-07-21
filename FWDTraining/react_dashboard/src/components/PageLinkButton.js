@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 function PageLinkButton({ icon, text, link}) {
   const history = useNavigate();
-  const location = useLocation();
+  const { pathname } = useLocation();
   const [ btnClass, setBtnClass ] = useState("pageLinkButton");
 
   // useEffect(() => {
@@ -17,20 +17,21 @@ function PageLinkButton({ icon, text, link}) {
     // changes
     if(link !== "/") {
       let ar1 = link.split("/");
-      let ar2 = location.pathname.split("/");
+      let ar2 = pathname.split("/");
       if(ar1[1] === ar2[1]) {
         setBtnClass("pageLinkButton active");
       } else {
         setBtnClass("pageLinkButton");
       }
     } else {
-      if(link === location.pathname) {
+      if(link === pathname) {
         setBtnClass("pageLinkButton active");
       } else {
         setBtnClass("pageLinkButton");
       }
     }
-  }, [location.pathname]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   // useEffect(() => {
   //   // execution logic will be here

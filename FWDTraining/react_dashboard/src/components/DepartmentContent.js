@@ -1,31 +1,78 @@
 import "../css/contentScreen.css";
-import PaginationButtons from "./PaginationButtons";
-// import departmentData from "../assets/departmentData.json";
-import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import PaginationButtons1 from "./PaginationButtons1";
+import departmentData from "../assets/departmentData.json";
+import { useState, useEffect, useCallback } from "react";
+import { useNavigate, useLocation, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  initializeDepartment,
+  addDepartment,
+  removeDepartment,
+} from "../store";
 import axios from "axios";
 
 function DepartmentContent() {
+  const dispatch = useDispatch();
   const { search } = useLocation();
+  const { pgNo } = useParams();
   const [page, setPage] = useState(1);
-  const [data, setData] = useState([]);
   const history = useNavigate();
+  const departments = useSelector((state) => {
+    return state.departments;
+  });
 
-  useEffect(() => {
-    history("/departments/" + page);
-  }, [page]);
+  const getCustomerData = useCallback(async () => {
+    try {
+      let response = await axios.get("http://localhost:8000/departments");
+      const initializeDepartmentAction = initializeDepartment(response.data);
+      dispatch(initializeDepartmentAction);
+    } catch (error) {
+      const initialValue = {};
+      const obj = departmentData.reduce((accumulator, currentValue) => {
+        return {
+          ...accumulator,
+          [currentValue.departmentId]: { ...currentValue },
+        };
+      }, initialValue);
+      const initializeDepartmentAction = initializeDepartment(obj);
+      dispatch(initializeDepartmentAction);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     getCustomerData();
-  }, [])
+  }, [getCustomerData]);
 
-  const getCustomerData = async() => {
-    try {
-      let response = await axios.get("http://localhost:8000/departments");
-      setData(response.data);
-    } catch (error) {
-      setData([]);
+  useEffect(() => {
+    history("/departments/" + page);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page]);
+
+  useEffect(() => {
+    const pattern = new RegExp("^[1-9]d*$");
+    if (pattern.test(pgNo)) {
+      setPage(Number(pgNo));
     }
+  }, [pgNo]);
+
+  const removeData = (id) => {
+    const removeDepartmentAction = removeDepartment(id);
+    dispatch(removeDepartmentAction);
+  };
+
+  const addData = () => {
+    let newObj = {
+      "DEPTXE-50ER" : {
+        departmentId: "DEPTXE-50ER",
+        departmentIncharge: "Sam Harris",
+        name : "Editors Guild",
+        size: 46,
+        tms : "23 GB"
+      }
+    }
+    const addDepartmentAction = addDepartment(newObj);
+    dispatch(addDepartmentAction);
   }
 
   return (
@@ -39,27 +86,45 @@ function DepartmentContent() {
               <th>Name</th>
               <th>Size</th>
               <th>Total Media Size</th>
+              <th>Action</th>
             </tr>
-            {data.slice(page * 10 - 10, page * 10).map((item) => (
-              <tr
-                id={item.departmentId}
-                key={item.departmentId}
-                className={item.departmentId === search.split('?')[1] ? "activeRow" : ""}
-              >
-                <td>{item.departmentId}</td>
-                <td>{item.departmentIncharge}</td>
-                <td>{item.name}</td>
-                <td>{item.size}</td>
-                <td>{item.tms}</td>
-              </tr>
-            ))}
+            {Object.keys(departments)
+              .slice(page * 10 - 10, page * 10)
+              .map((item) => (
+                <tr
+                  id={departments[item].departmentId}
+                  key={departments[item].departmentId}
+                  className={
+                    departments[item].departmentId === search.split("?")[1]
+                      ? "activeRow"
+                      : ""
+                  }
+                >
+                  <td>{departments[item].departmentId}</td>
+                  <td>{departments[item].departmentIncharge}</td>
+                  <td>{departments[item].name}</td>
+                  <td>{departments[item].size}</td>
+                  <td>{departments[item].tms}</td>
+                  <td>
+                    <button
+                      className="pageButton icon"
+                      onClick={() => removeData(departments[item].departmentId)}
+                    >
+                      Remove
+                    </button>
+                  </td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>
-      <PaginationButtons
+      <div style={{ display: "flex", justifyContent: "end" }}>
+        <button className="pageButton icon" onClick = {() => addData()}>Add</button>
+      </div>
+      <PaginationButtons1
         page={page}
         setPage={setPage}
-        total={Math.ceil(data.length / 10)}
+        total={Math.ceil(Object.keys(departments).length / 10)}
       />
     </div>
   );

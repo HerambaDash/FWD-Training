@@ -1,12 +1,12 @@
 import "../css/pagination.css";
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+// import { useEffect } from "react";
+// import { useParams } from "react-router-dom";
 
-function PaginationButtons({ page, setPage, total }) {
-  const params = useParams();
-  useEffect(() => {
-    setPage(Number(params.pgNo));
-  }, []);
+function PaginationButtons1({ page, setPage, total }) {
+  // const params = useParams();
+  // useEffect(() => {
+  //   setPage(Number(params.pgNo));
+  // }, []);
 
   return (
     <div className="pagination">
@@ -31,4 +31,4 @@ function PaginationButtons({ page, setPage, total }) {
   );
 }
 
-export default PaginationButtons;
+export default PaginationButtons1;
