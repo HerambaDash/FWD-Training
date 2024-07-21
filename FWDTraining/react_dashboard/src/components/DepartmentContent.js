@@ -8,6 +8,7 @@ import {
   initializeDepartment,
   addDepartment,
   removeDepartment,
+  updateDepartment,
 } from "../store";
 import axios from "axios";
 
@@ -63,17 +64,22 @@ function DepartmentContent() {
 
   const addData = () => {
     let newObj = {
-      "DEPTXE-50ER" : {
+      "DEPTXE-50ER": {
         departmentId: "DEPTXE-50ER",
         departmentIncharge: "Sam Harris",
-        name : "Editors Guild",
+        name: "Editors Guild",
         size: 46,
-        tms : "23 GB"
-      }
-    }
+        tms: "23 GB",
+      },
+    };
     const addDepartmentAction = addDepartment(newObj);
     dispatch(addDepartmentAction);
-  }
+  };
+
+  const updateData = (id, property, value) => {
+    const updateDepartmentAction = updateDepartment({ id, property, value});
+    dispatch(updateDepartmentAction);
+  };
 
   return (
     <div className="content">
@@ -104,7 +110,21 @@ function DepartmentContent() {
                   <td>{departments[item].departmentIncharge}</td>
                   <td>{departments[item].name}</td>
                   <td>{departments[item].size}</td>
-                  <td>{departments[item].tms}</td>
+                  <td>
+                    <input
+                      id={departments[item].departmentId}
+                      key={departments[item].departmentId}
+                      type="text"
+                      value={departments[item].tms}
+                      onChange={(e) =>
+                        updateData(
+                          departments[item].departmentId,
+                          "tms",
+                          e.target.value
+                        )
+                      }
+                    />
+                  </td>
                   <td>
                     <button
                       className="pageButton icon"
@@ -112,6 +132,12 @@ function DepartmentContent() {
                     >
                       Remove
                     </button>
+                    {/* <button
+                      className="pageButton icon"
+                      onClick={() => updateData(departments[item].departmentId)}
+                    >
+                      Update
+                    </button> */}
                   </td>
                 </tr>
               ))}
@@ -119,7 +145,9 @@ function DepartmentContent() {
         </table>
       </div>
       <div style={{ display: "flex", justifyContent: "end" }}>
-        <button className="pageButton icon" onClick = {() => addData()}>Add</button>
+        <button className="pageButton icon" onClick={() => addData()}>
+          Add
+        </button>
       </div>
       <PaginationButtons1
         page={page}
