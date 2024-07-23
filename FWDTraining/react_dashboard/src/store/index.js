@@ -30,17 +30,37 @@ const departmentsSlice = createSlice({
   },
 });
 
+const accountSlice = createSlice({
+  name: "account",
+  initialState: {
+    name : "",
+    email : "",
+    phone : "",
+    date : ""
+  },
+  reducers: {
+    updateAccountInfo(state, action) {
+      const { name, email, phone, date } = action.payload;
+      state.name = name.value;
+      state.email = email.value;
+      state.phone = phone.value;
+      state.date = date.value;
+    },
+  },
+});
+
 const store = configureStore({
   reducer: {
     departments: departmentsSlice.reducer,
+    accounts : accountSlice.reducer
+    // customers : customersSlice.reducer
+    // media : mediaSlice.reducer
   },
 });
 
 // console.log(store);
 // const startingState = store.getState();
 // console.log(JSON.stringify(startingState, null, 2));
-
-// console.log(departmentsSlice.actions)
 
 export { store };
 export const {
@@ -49,3 +69,4 @@ export const {
   removeDepartment,
   updateDepartment,
 } = departmentsSlice.actions;
+export const { updateAccountInfo } = accountSlice.actions;

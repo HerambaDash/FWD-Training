@@ -97,4 +97,66 @@ table, th, td {
 .logout {
   width: 70px;
   margin: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid rgb(154, 84, 162);
+  border-radius: 5px;
 }
+
+.logout:hover {
+  background-color: rgb(154, 84, 162);
+  color: #ffffff;
+}
+
+.accountForm {
+  margin : 10px;
+}
+
+.accountInput {
+  margin-bottom: 10px;
+  width: 150px;
+}
+
+.pencil {
+  margin-left: 10px;
+  background-color: transparent;
+  border: 1px solid rgb(154, 84, 162);
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.pencil:hover {
+  background-color: rgb(154, 84, 162);
+  color: #ffffff;
+}
+
+.active {
+  background-color: rgb(154, 84, 162);
+  color: #ffffff;
+}
+
+.accountButton {
+  margin: 0px 5px;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.save {
+  border: 1px solid rgb(93, 207, 81);
+}
+
+.cancel {
+  border: 1px solid rgb(207, 81, 81);
+}
+
+.save:hover {
+  background-color: rgb(93, 207, 81);
+  color: #ffffff;
+}
+
+.cancel:hover {
+  background-color: rgb(207, 81, 81);
+  color: #ffffff;
+}
+

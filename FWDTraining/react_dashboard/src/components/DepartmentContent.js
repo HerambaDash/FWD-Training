@@ -24,7 +24,10 @@ function DepartmentContent() {
 
   const getCustomerData = useCallback(async () => {
     try {
+      // get, post, put, delete
+      // (url, configurationObject, payload)
       let response = await axios.get("http://localhost:8000/departments");
+      // console.log(response);
       const initializeDepartmentAction = initializeDepartment(response.data);
       dispatch(initializeDepartmentAction);
     } catch (error) {
@@ -58,14 +61,22 @@ function DepartmentContent() {
   }, [pgNo]);
 
   const removeData = (id) => {
+    // call api to remove a data
+    // response will be an object that has been removed, that
+    // object will have the id property 
+    // pass that id to store
+
+    // if data update in db server is 200 status
     const removeDepartmentAction = removeDepartment(id);
     dispatch(removeDepartmentAction);
+    // else the change you performed yo have to undo it 
   };
 
   const addData = () => {
+    let rand = Math.random();
     let newObj = {
-      "DEPTXE-50ER": {
-        departmentId: "DEPTXE-50ER",
+      ["DEPTXE-50ER" + rand.toString()]: {
+        departmentId: "DEPTXE-50ER" + rand.toString(),
         departmentIncharge: "Sam Harris",
         name: "Editors Guild",
         size: 46,
@@ -132,12 +143,6 @@ function DepartmentContent() {
                     >
                       Remove
                     </button>
-                    {/* <button
-                      className="pageButton icon"
-                      onClick={() => updateData(departments[item].departmentId)}
-                    >
-                      Update
-                    </button> */}
                   </td>
                 </tr>
               ))}

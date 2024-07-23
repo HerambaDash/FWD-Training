@@ -33,10 +33,15 @@ function CustomerContent() {
   //   console.log(ref.current);
   // }
 
+  // const reRenderCount = useCallback(() => {
+  //   console.log("Re-render");
+  //   console.log(ref.current);
+  // }, []);
+
   const reRenderCount = useCallback(() => {
-    // console.log("Re-render");
-    // console.log(ref.current);
-  }, [])
+    console.log("Re-render");
+    console.log(ref.current);
+  }, []);
 
   const memoData = useMemo(() => {
     return customerData.filter(item => item.customerId.length > 4)
